@@ -1,0 +1,3 @@
+#!/bin/sh
+USER='alain'
+ssh $USER@sarus.affinitic.be "pg_dump -O -x -F c -c -C clpsbw"|pg_restore -W -x -v -C -O -F c -d template1
